@@ -23,7 +23,7 @@ public class Utils {
 	public static int random(int min, int max) {
 		return random.nextInt(max - min) + min;
 	}
-	
+
 	/**
 	 * Returns a random element from the given array
 	 * @param array
@@ -46,12 +46,13 @@ public class Utils {
 		}
 	}
 	
-	/**
-	 * Simulates sleeping for a given time
-	 * 
-	 * @param time
-	 *            The time to sleep for in milliseconds
-	 */
+
+    /**
+     * Simulates sleeping for a given time
+     *
+     * @param min The minimum time to sleep in milliseconds
+     * @param max The maximum time to sleep in milliseconds
+     */
 	public static void sleep(int min, int max) {
 		try {
 			Thread.sleep(random(min, max));

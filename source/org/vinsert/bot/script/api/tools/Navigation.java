@@ -76,6 +76,7 @@ public class Navigation {
 			//if we're on the last path node, we won't be transitioning so we have to end up at the exact position
 			if (!ctx.players.getLocalPlayer().isMoving()) {
 				navigate(path.getNext(), policy);
+                Utils.sleep(200, 600);
 			}
 		} else {
 			//check if the player exceeded the path node's transition threshold
@@ -86,9 +87,15 @@ public class Navigation {
 				path.advance();
 				Tile target = deviate(path.getNext(), deviation, deviation);
 				path.setTarget(target, Utils.random(TRANSITION_THRESHOLD_MIN, TRANSITION_THRESHOLD_MAX));
-				navigate(path.getNext(), policy);
+                if (!ctx.players.getLocalPlayer().isMoving()) {
+                    navigate(path.getNext(), policy);
+                    Utils.sleep(200, 600);
+                }
 			} else if (!ctx.players.getLocalPlayer().isMoving()) {
-				navigate(path.getNext(), policy);
+                if (!ctx.players.getLocalPlayer().isMoving()) {
+                    navigate(path.getNext(), policy);
+                    Utils.sleep(200, 600);
+                }
 			}
 		}
 		
