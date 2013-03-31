@@ -9,7 +9,7 @@ import org.vinsert.bot.script.api.Widget;
 import org.vinsert.bot.script.api.generic.Filters;
 import org.vinsert.bot.script.randevent.RandomEvent;
 
-@ScriptManifest(name = "Mystery Box", description = "Solves the Mystery Box random", authors = { "listerkeler" }, version = 1.0D)
+@ScriptManifest(name = "Mystery Box", description = "Solves the Mystery Box random", authors = { "listerkeler" }, version = 1.1D)
 public class MysteryBox extends RandomEvent {
     private final int[] MYSTERY_BOX = { 3063 };
     private final int[] OLD_MAN = { 410 };
